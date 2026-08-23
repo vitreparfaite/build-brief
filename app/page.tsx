@@ -4,13 +4,11 @@ import {
   ArrowRight,
   Car,
   Clock3,
-  Camera,
   MapPin,
   Phone,
   UtensilsCrossed,
 } from 'lucide-react'
 import { fullAddress, restaurant } from '@/config/restaurant'
-import { SiteHeader } from '@/components/site-header'
 
 const featuredDishes = [
   {
@@ -64,7 +62,6 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(restaurantJsonLd) }} />
-      <SiteHeader />
       <main id="accueil">
         <section className="hero-section">
           <div className="hero-copy">
@@ -204,18 +201,6 @@ export default function Page() {
           </div>
         </section>
       </main>
-
-      <footer className="site-footer">
-        <div className="footer-brand">
-          <span className="font-serif text-3xl font-semibold">Racine Créole</span>
-          <p>Cuisine fusion créole · Laval</p>
-        </div>
-        <div className="footer-links">
-          <a href={restaurant.social.instagram} target="_blank" rel="noreferrer"><Camera aria-hidden="true" />Instagram</a>
-          <a href={`mailto:${restaurant.email}`}>{restaurant.email}</a>
-        </div>
-        <p className="footer-legal">© {new Date().getFullYear()} Racine Créole</p>
-      </footer>
     </>
   )
 }

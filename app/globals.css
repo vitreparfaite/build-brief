@@ -74,6 +74,10 @@
   .text-link { @apply mt-7 inline-flex min-h-11 items-center gap-2 text-sm font-bold text-primary underline decoration-secondary decoration-2 underline-offset-8; }
   .text-link svg { @apply size-4 transition-transform; }
   .text-link:hover svg { @apply translate-x-1; }
+  .form-field { @apply flex flex-col gap-2 text-sm font-bold; }
+  .form-field input, .form-field select, .form-field textarea { @apply min-h-12 rounded-lg border border-input bg-background px-4 py-3 text-base font-normal text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-ring/25; }
+  .form-field textarea { @apply resize-y; }
+  .button-primary svg, .button-outline svg { @apply size-4; }
 }
 
 .hero-section { @apply mx-auto grid min-h-[calc(100svh-4rem)] max-w-[1600px] md:min-h-[720px] md:grid-cols-[0.92fr_1.08fr]; }
