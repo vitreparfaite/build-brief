@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Menu, Phone } from 'lucide-react'
 import { restaurant } from '@/config/restaurant'
 
@@ -12,9 +13,15 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:h-20 md:px-8">
-        <a href="#accueil" className="flex min-h-11 items-center gap-3" aria-label="Racine Créole, accueil">
-          <span className="flex size-10 items-center justify-center rounded-full border border-primary font-serif text-lg font-semibold text-primary">RC</span>
-          <span className="font-serif text-xl font-semibold tracking-tight">Racine Créole</span>
+        <a href="#accueil" className="flex min-h-11 items-center" aria-label="Racine Créole, accueil">
+          <Image
+            src="/images/racine/logo-full.jpg"
+            alt="Racine Créole — cuisine fusion"
+            width={128}
+            height={128}
+            priority
+            className="h-14 w-auto object-contain md:h-[4.5rem]"
+          />
         </a>
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Navigation principale">
           {navItems.map((item) => (
