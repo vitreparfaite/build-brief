@@ -8,7 +8,7 @@ export const metadata: Metadata = { title: 'Menu | Racine Créole', description:
 
 export default function MenuPage() {
   return <main>
-    <PageHero eyebrow="À table" title="Le menu" description="Des classiques haïtiens aux créations fusion, une cuisine généreuse qui fait voyager sans quitter Laval." image="/images/racine/dish-2.jpg" />
+    <PageHero eyebrow="À table" title="Le menu" description="Des classiques haïtiens aux créations fusion, une cuisine généreuse qui fait voyager sans quitter Laval." image="/images/racine/ambiance-bg.jpg" />
     <nav className="sticky top-16 z-30 overflow-x-auto border-b border-border bg-background/95 px-4 backdrop-blur md:top-20" aria-label="Catégories du menu">
       <div className="mx-auto flex min-w-max max-w-7xl gap-2 py-3">{menuSections.map(section => <a key={section.id} href={`#${section.id}`} className="flex min-h-11 items-center rounded-full border border-border px-4 text-sm font-semibold hover:bg-muted">{section.title}</a>)}</div>
     </nav>

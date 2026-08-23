@@ -102,7 +102,7 @@
 .dish-grid { @apply grid gap-5 md:grid-cols-2; }
 .dish-card { @apply overflow-hidden bg-card; }
 .dish-card-featured { @apply md:row-span-2; }
-.dish-image { @apply relative aspect-[4/3] overflow-hidden; }
+.dish-image { @apply relative aspect-square overflow-hidden; }
 .dish-card-featured .dish-image { @apply md:aspect-auto md:h-[720px]; }
 .dish-copy { @apply flex flex-col gap-2 p-5 md:p-6; }
 .dish-copy p:last-child { @apply text-sm leading-relaxed text-muted-foreground; }

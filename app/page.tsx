@@ -26,7 +26,7 @@ const featuredDishes = [
   {
     name: 'Poutine fusion',
     note: 'Le réconfort québécois traversé par les saveurs créoles.',
-    image: '/images/racine/dish-3.jpg',
+    image: '/images/racine/dish-8.jpg',
     alt: 'Poutine fusion garnie de viande et d’oignons verts chez Racine Créole',
   },
 ]
@@ -80,7 +80,7 @@ export default function Page() {
             </a>
           </div>
           <div className="hero-visual">
-            <Image src="/images/racine/dish-2.jpg" alt="Assiette de griot, riz collé et plantains de Racine Créole" fill priority sizes="(max-width: 768px) 100vw, 54vw" className="object-cover" />
+            <Image src="/images/racine/dish-6.jpg" alt="Assiette de poulet boucané, riz collé et bananes pesées de Racine Créole" fill priority sizes="(max-width: 768px) 100vw, 54vw" className="object-cover object-center" />
             <div className="hero-stamp">
               <span>Racines</span>
               <strong>Haïtiennes</strong>
@@ -137,14 +137,14 @@ export default function Page() {
             </p>
           </div>
           <figure className="story-image">
-            <Image src="/images/racine/hero-food.jpg" alt="Mur végétal et enseigne lumineuse Racine Créole dans le restaurant" fill loading="eager" sizes="(max-width: 768px) 100vw, 42vw" className="object-cover" />
+            <Image src="/images/racine/hero-food.jpg" alt="Mur végétal et enseigne lumineuse Racine Créole dans le restaurant" fill loading="eager" sizes="(max-width: 768px) 100vw, 42vw" className="object-cover object-[50%_38%]" />
           </figure>
         </section>
 
         <section id="restaurant" className="section-shell py-20 md:py-32">
           <div className="experience-grid">
             <div className="experience-image">
-              <Image src="/images/racine/hero-food.jpg" alt="Décor végétal distinctif à l’intérieur de Racine Créole" fill loading="eager" sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
+              <Image src="/images/racine/ambiance-bg.jpg" alt="Tablée généreuse de plats créoles chez Racine Créole" fill loading="eager" sizes="(max-width: 768px) 100vw, 50vw" className="object-cover object-center" />
               <span className="image-source">Photo officielle Racine Créole</span>
             </div>
             <div className="experience-copy">

@@ -11,7 +11,7 @@ export default function RestaurantPage() {
   return <main>
     <PageHero eyebrow="Notre maison" title="Des racines, une table." description="Racine Créole célèbre une cuisine inspirée d’Haïti, façonnée à Laval et portée par le plaisir de recevoir." />
     <section className="mx-auto grid max-w-7xl gap-10 px-5 py-16 md:grid-cols-2 md:px-8 md:py-24">
-      <div className="relative min-h-[28rem] overflow-hidden rounded-xl"><Image src="/images/racine/hero-food.jpg" alt="Décor végétal et enseigne Racine Créole dans la salle" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" /></div>
+      <div className="relative min-h-[28rem] overflow-hidden rounded-xl"><Image src="/images/racine/hero-food.jpg" alt="Décor végétal et enseigne Racine Créole dans la salle" fill className="object-cover object-[50%_38%]" sizes="(max-width: 768px) 100vw, 50vw" /></div>
       <div className="flex flex-col justify-center gap-6"><p className="eyebrow">L&apos;histoire</p><h2 className="text-balance font-serif text-4xl md:text-6xl">La mémoire des recettes, l&apos;élan d&apos;aujourd&apos;hui.</h2><p className="leading-7 text-muted-foreground">Notre cuisine part de saveurs créoles familières et les fait dialoguer avec le Québec d&apos;aujourd&apos;hui. Chaque assiette cherche l&apos;équilibre entre générosité, caractère et précision.</p><p className="leading-7 text-muted-foreground">Le restaurant est un lieu de rassemblement accessible : on y vient pour un repas, pour célébrer, ou simplement pour retrouver un goût qui parle de chez soi.</p><Link href="/menu" className="button-primary w-fit">Voir le menu</Link></div>
     </section>
     <section className="bg-muted"><div className="mx-auto grid max-w-7xl gap-5 px-5 py-14 md:grid-cols-3 md:px-8 md:py-20">{[

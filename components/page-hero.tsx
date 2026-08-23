@@ -1,9 +1,15 @@
 import Image from 'next/image'
 
-export function PageHero({ eyebrow, title, description, image = '/images/racine/hero-food.jpg' }: { eyebrow: string; title: string; description: string; image?: string }) {
+export function PageHero({
+  eyebrow,
+  title,
+  description,
+  image = '/images/racine/hero-food.jpg',
+  imagePosition = '50% 42%',
+}: { eyebrow: string; title: string; description: string; image?: string; imagePosition?: string }) {
   return (
     <section className="relative isolate min-h-[23rem] overflow-hidden bg-primary text-primary-foreground">
-      <Image src={image} alt="" fill priority className="object-cover opacity-45" sizes="100vw" />
+      <Image src={image} alt="" fill priority className="object-cover opacity-45" style={{ objectPosition: imagePosition }} sizes="100vw" />
       <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent" />
       <div className="relative mx-auto flex min-h-[23rem] max-w-7xl flex-col justify-end gap-4 px-5 py-12 md:px-8 md:py-16">
         <p className="text-xs font-bold uppercase tracking-[0.2em] text-secondary">{eyebrow}</p>
