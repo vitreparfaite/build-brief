@@ -1,46 +1,49 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
+import { Cormorant_Garamond, Manrope } from 'next/font/google'
 import './globals.css'
 
+const display = Cormorant_Garamond({
+  subsets: ['latin'],
+  variable: '--font-display',
+  weight: ['500', '600', '700'],
+  display: 'swap',
+})
+
+const body = Manrope({
+  subsets: ['latin'],
+  variable: '--font-body',
+  display: 'swap',
+})
+
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+  metadataBase: new URL('https://racinecreole.com'),
+  title: 'Racine Créole | Cuisine fusion créole à Laval',
+  description:
+    'Découvrez Racine Créole à Laval : une cuisine d’inspiration haïtienne, généreuse et contemporaine, à savourer sur place ou à commander.',
+  applicationName: 'Racine Créole',
+  alternates: { canonical: '/' },
+  openGraph: {
+    title: 'Racine Créole | Saveurs créoles au goût d’ici',
+    description: 'Cuisine fusion créole à Laval, inspirée d’Haïti et pensée pour se retrouver.',
+    type: 'website',
+    locale: 'fr_CA',
+    images: [{ url: '/images/racine/dish-2.jpg', width: 1600, height: 1600, alt: 'Une assiette signée Racine Créole' }],
   },
+  icons: { icon: '/icon.svg', apple: '/apple-icon.png' },
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'light dark',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
-  ],
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  themeColor: '#153a2a',
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body className="antialiased">
+    <html lang="fr-CA" className={`bg-background ${display.variable} ${body.variable}`}>
+      <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
